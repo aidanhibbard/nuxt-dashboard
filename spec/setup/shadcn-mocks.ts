@@ -2,7 +2,7 @@ import { vi } from 'vitest'
 
 // Mock Sidebar context and components to avoid injection errors
 vi.mock('@/components/shadcn/ui/sidebar', async () => {
-  (globalThis as any).__sidebarIsMobile = false
+  (globalThis as Record<string, unknown>).__sidebarIsMobile = false
   const comps = {
     Sidebar: { name: 'Sidebar', template: '<aside><slot /></aside>' },
     SidebarContent: { name: 'SidebarContent', template: '<section><slot /></section>' },
@@ -30,9 +30,9 @@ vi.mock('@/components/shadcn/ui/sidebar', async () => {
     SidebarHeaderItem: { name: 'SidebarHeaderItem', template: '<div><slot /></div>' },
     SidebarInsetItem: { name: 'SidebarInsetItem', template: '<div><slot /></div>' },
     SidebarInput: { name: 'SidebarInput', template: '<input />' },
-    useSidebar: () => ({ isMobile: (globalThis as any).__sidebarIsMobile }),
+    useSidebar: () => ({ isMobile: (globalThis as Record<string, unknown>).__sidebarIsMobile }),
   }
-  return comps as any
+  return comps satisfies Record<string, unknown>
 })
 
 // Mock Dropdown and other primitives we use in tests
@@ -46,7 +46,7 @@ vi.mock('@/components/shadcn/ui/dropdown-menu', async () => {
     DropdownMenuSeparator: { template: '<hr />' },
     DropdownMenuShortcut: { template: '<kbd><slot /></kbd>' },
     DropdownMenuTrigger: { template: '<div><slot /></div>' },
-  } as any
+  } satisfies Record<string, unknown>
 })
 
 vi.mock('@/components/shadcn/ui/collapsible', async () => {
@@ -54,7 +54,7 @@ vi.mock('@/components/shadcn/ui/collapsible', async () => {
     Collapsible: { template: '<div><slot /></div>' },
     CollapsibleContent: { template: '<div><slot /></div>' },
     CollapsibleTrigger: { template: '<div><slot /></div>' },
-  } as any
+  } satisfies Record<string, unknown>
 })
 
 vi.mock('@/components/shadcn/ui/breadcrumb', async () => {
@@ -65,20 +65,20 @@ vi.mock('@/components/shadcn/ui/breadcrumb', async () => {
     BreadcrumbLink: { template: '<a><slot /></a>' },
     BreadcrumbSeparator: { template: '<span>|</span>' },
     BreadcrumbPage: { template: '<span class="page"><slot /></span>' },
-  } as any
+  } satisfies Record<string, unknown>
 })
 
 vi.mock('@/components/shadcn/ui/separator', async () => ({
   Separator: { template: '<hr />' },
-}))
+} as Record<string, unknown>))
 
 vi.mock('@/components/shadcn/ui/avatar', async () => ({
   Avatar: { template: '<div class="avatar"><slot /></div>' },
   AvatarFallback: { template: '<div class="fallback"><slot /></div>' },
   AvatarImage: { template: '<img />' },
-}))
+} as Record<string, unknown>))
 
 // Mock Nuxt middleware helper
 // Returns the original handler function so it can be invoked directly in tests
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-;(globalThis as any).defineNuxtRouteMiddleware = (fn: any) => fn
+;(globalThis as Record<string, unknown>).defineNuxtRouteMiddleware = (fn: any) => fn

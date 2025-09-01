@@ -17,8 +17,8 @@ const stubs = {
 
 describe('components/navigation/sidebar/TeamSwitcher.vue', () => {
   const teams = [
-    { name: 'Acme Inc', logo: { name: 'LogoA' } as any, plan: 'Enterprise' },
-    { name: 'Acme Corp', logo: { name: 'LogoB' } as any, plan: 'Free' },
+    { name: 'Acme Inc', logo: { name: 'LogoA' } as unknown as object, plan: 'Enterprise' },
+    { name: 'Acme Corp', logo: { name: 'LogoB' } as unknown as object, plan: 'Free' },
   ]
 
   it('renders the active team name', () => {
@@ -40,5 +40,3 @@ describe('components/navigation/sidebar/TeamSwitcher.vue', () => {
     expect(wrapper.text()).toContain('Acme Corp')
   })
 })
-
-

@@ -1,4 +1,4 @@
-import { describe, it, expect, vi, beforeEach } from 'vitest'
+import { describe, it, expect } from 'vitest'
 import { mount } from '@vue/test-utils'
 import NavUser from '@/components/navigation/sidebar/NavUser.vue'
 
@@ -30,16 +30,14 @@ describe('components/navigation/sidebar/NavUser.vue', () => {
   })
 
   it('matches snapshot (desktop)', () => {
-    ;(globalThis as any).__sidebarIsMobile = false
+    ;(globalThis as Record<string, unknown>).__sidebarIsMobile = false
     const wrapper = mount(NavUser, { global: { stubs }, props: { user } })
     expect(wrapper.html()).toMatchSnapshot()
   })
 
   it('changes dropdown side on mobile', () => {
-    ;(globalThis as any).__sidebarIsMobile = true
+    ;(globalThis as Record<string, unknown>).__sidebarIsMobile = true
     const wrapper = mount(NavUser, { global: { stubs }, props: { user } })
     expect(wrapper.find('[data-side="bottom"]').exists()).toBe(true)
   })
 })
-
-
