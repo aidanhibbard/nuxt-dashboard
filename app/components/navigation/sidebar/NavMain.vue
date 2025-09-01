@@ -42,7 +42,7 @@ defineProps<{
         :default-open="item.isActive"
         class="group/collapsible"
       >
-        <SidebarMenuItem>
+        <SidebarMenuItem v-if="item.items">
           <CollapsibleTrigger as-child>
             <SidebarMenuButton :tooltip="item.title">
               <component
@@ -67,6 +67,20 @@ defineProps<{
               </SidebarMenuSubItem>
             </SidebarMenuSub>
           </CollapsibleContent>
+        </SidebarMenuItem>
+        <SidebarMenuItem v-else>
+          <SidebarMenuButton
+            as-child
+            :tooltip="item.title"
+          >
+            <a :href="item.url">
+              <component
+                :is="item.icon"
+                v-if="item.icon"
+              />
+              <span>{{ item.title }}</span>
+            </a>
+          </SidebarMenuButton>
         </SidebarMenuItem>
       </Collapsible>
     </SidebarMenu>

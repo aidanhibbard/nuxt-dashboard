@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import AppSidebar from '@/components/navigation/sidebar/AppSidebar.vue'
 import AppHeader from '@/components/navigation/header/AppHeader.vue'
+import ToastContainer from '@/components/ui/ToastContainer.vue'
 import {
   SidebarInset,
   SidebarProvider,
@@ -16,5 +17,6 @@ import {
         <slot />
       </div>
     </SidebarInset>
+    <ToastContainer />
   </SidebarProvider>
 </template>

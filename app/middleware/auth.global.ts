@@ -5,6 +5,6 @@ export default defineNuxtRouteMiddleware(async () => {
 
   if (!loggedIn.value) {
     // Has to be external for redirect to work
-    return navigateTo('/auth/auth0', { external: true })
+    // return navigateTo('/auth/auth0', { external: true })
   }
 })

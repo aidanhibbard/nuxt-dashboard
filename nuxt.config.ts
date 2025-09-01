@@ -10,7 +10,7 @@ export default defineNuxtConfig({
     'nuxt-auth-utils',
     'shadcn-nuxt',
     'nuxt-processor',
-    '@prisma/nuxt',
+    // '@prisma/nuxt',
   ],
   devtools: { enabled: true },
   css: ['~/assets/styles/tailwind.css'],
