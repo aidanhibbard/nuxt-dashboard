@@ -28,6 +28,15 @@ export interface ChartData {
   }[]
 }
 
+export interface Order {
+  id: string
+  customer: string
+  email: string
+  totalCents: number
+  status: 'paid' | 'pending' | 'failed'
+  createdAt: Date
+}
+
 export const useDashboard = () => {
   const { showSuccess, showError, showLoading, dismiss } = useToast()
   const loading = ref(false)
@@ -79,6 +88,50 @@ export const useDashboard = () => {
       message: 'User account deleted',
       timestamp: new Date('2024-01-15T14:10:00Z'),
       user: 'inactive@example.com',
+    },
+  ])
+
+  // Mock recent orders
+  const recentOrders = ref<Order[]>([
+    {
+      id: 'ORD-10021',
+      customer: 'Acme Inc.',
+      email: 'billing@acme.com',
+      totalCents: 129900,
+      status: 'paid',
+      createdAt: new Date('2024-01-15T13:45:00Z'),
+    },
+    {
+      id: 'ORD-10020',
+      customer: 'Jane Smith',
+      email: 'jane.smith@example.com',
+      totalCents: 4999,
+      status: 'pending',
+      createdAt: new Date('2024-01-15T12:20:00Z'),
+    },
+    {
+      id: 'ORD-10019',
+      customer: 'Globex LLC',
+      email: 'ap@globex.com',
+      totalCents: 34900,
+      status: 'paid',
+      createdAt: new Date('2024-01-15T11:10:00Z'),
+    },
+    {
+      id: 'ORD-10018',
+      customer: 'Bob Johnson',
+      email: 'bob.johnson@example.com',
+      totalCents: 2099,
+      status: 'failed',
+      createdAt: new Date('2024-01-15T10:55:00Z'),
+    },
+    {
+      id: 'ORD-10017',
+      customer: 'Wayne Enterprises',
+      email: 'finance@wayne.com',
+      totalCents: 78000,
+      status: 'paid',
+      createdAt: new Date('2024-01-15T09:40:00Z'),
     },
   ])
 
@@ -191,6 +244,7 @@ export const useDashboard = () => {
     userRoleDistribution: readonly(userRoleDistribution),
     loading: readonly(loading),
     lastUpdated: readonly(lastUpdated),
+    recentOrders: readonly(recentOrders),
     refreshDashboard,
     addActivity,
   }

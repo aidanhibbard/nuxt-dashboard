@@ -155,6 +155,17 @@ export const useReports = () => {
     return null
   })
 
+  // Derived demo series for charts based on current filters
+  const usersSeries = computed<ChartDataPoint[]>(() =>
+    generateUserData(filters.value.startDate, filters.value.endDate, filters.value.groupBy ?? 'day'),
+  )
+  const revenueSeries = computed<ChartDataPoint[]>(() =>
+    generateRevenueData(filters.value.startDate, filters.value.endDate, filters.value.groupBy ?? 'day'),
+  )
+  const activitySeries = computed<ChartDataPoint[]>(() =>
+    generateActivityData(filters.value.startDate, filters.value.endDate, filters.value.groupBy ?? 'day'),
+  )
+
   // Methods
   const generateReport = async (reportFilters: ReportFilters) => {
     const loadingToast = showLoading('Generating report...')
@@ -278,6 +289,9 @@ export const useReports = () => {
     currentReport: readonly(currentReport),
     filteredReports,
     reportSummary,
+    usersSeries,
+    revenueSeries,
+    activitySeries,
     loading: readonly(loading),
     generateReport,
     exportReport,

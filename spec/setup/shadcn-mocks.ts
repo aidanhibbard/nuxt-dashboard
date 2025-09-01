@@ -68,6 +68,13 @@ vi.mock('@/components/shadcn/ui/breadcrumb', async () => {
   } satisfies Record<string, unknown>
 })
 
+// Mock vue-chartjs Line component for deterministic tests
+vi.mock('vue-chartjs', async () => {
+  return {
+    Line: { name: 'ChartLine', template: '<div class="chart-line" />' },
+  } as Record<string, unknown>
+})
+
 vi.mock('@/components/shadcn/ui/separator', async () => ({
   Separator: { template: '<hr />' },
 } as Record<string, unknown>))

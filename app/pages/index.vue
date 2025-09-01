@@ -4,7 +4,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Users, TrendingUp, DollarSign, ArrowUpRight, ArrowDownRight, UserCheck } from 'lucide-vue-next'
 import LineChart from '@/components/ui/LineChart.vue'
 
-const { formattedStats, userGrowthData } = useDashboard()
+const { formattedStats, userGrowthData, recentOrders } = useDashboard()
 </script>
 
 <template>
@@ -111,7 +111,7 @@ const { formattedStats, userGrowthData } = useDashboard()
     <!-- Charts and Recent Orders -->
     <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-7">
       <!-- User Growth Chart -->
-      <Card class="col-span-7">
+      <Card class="col-span-4">
         <CardHeader>
           <CardTitle>User Growth</CardTitle>
           <CardDescription>
@@ -124,6 +124,48 @@ const { formattedStats, userGrowthData } = useDashboard()
             :datasets="userGrowthData.datasets.map(d => ({ ...d, data: [...d.data] }))"
             :height="320"
           />
+        </CardContent>
+      </Card>
+      <!-- Recent Orders -->
+      <Card class="col-span-3">
+        <CardHeader>
+          <CardTitle>Recent Orders</CardTitle>
+          <CardDescription>
+            Latest transactions
+          </CardDescription>
+        </CardHeader>
+        <CardContent>
+          <div class="space-y-4">
+            <div
+              v-for="order in recentOrders.slice(0, 6)"
+              :key="order.id"
+              class="flex items-center justify-between border-b pb-3 last:border-b-0 last:pb-0"
+            >
+              <div>
+                <p class="text-sm font-medium">
+                  {{ order.id }} — {{ order.customer }}
+                </p>
+                <p class="text-xs text-muted-foreground">
+                  {{ order.email }}
+                </p>
+              </div>
+              <div class="text-right">
+                <p class="text-sm font-medium">
+                  ${{ (order.totalCents / 100).toLocaleString() }}
+                </p>
+                <p
+                  class="text-xs"
+                  :class="{
+                    'text-green-600': order.status === 'paid',
+                    'text-yellow-600': order.status === 'pending',
+                    'text-red-600': order.status === 'failed',
+                  }"
+                >
+                  {{ order.status }}
+                </p>
+              </div>
+            </div>
+          </div>
         </CardContent>
       </Card>
     </div>
