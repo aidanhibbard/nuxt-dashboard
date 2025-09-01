@@ -1,0 +1,23 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`components/navigation/sidebar/NavMain.vue > matches snapshot 1`] = `
+"<div>
+  <div>Platform</div>
+  <ul>
+    <div as-child="" default-open="true" class="group/collapsible">
+      <li>
+        <div as-child=""><button tooltip="Playground">
+            <!--v-if--><span>Playground</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide ml-auto transition-transform duration-200 group-data-[state=open]/collapsible:rotate-90 lucide-chevron-right-icon lucide-chevron-right ml-auto transition-transform duration-200 group-data-[state=open]/collapsible:rotate-90">
+              <path d="m9 18 6-6-6-6"></path>
+            </svg>
+          </button></div>
+        <div>
+          <ul>
+            <li><button as-child=""><a href="#"><span>History</span></a></button></li>
+          </ul>
+        </div>
+      </li>
+    </div>
+  </ul>
+</div>"
+`;

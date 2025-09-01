@@ -1,5 +1,5 @@
 {
-  "name": "nuxt-app",
+  "name": "nuxt-dashboard",
   "type": "module",
   "private": true,
   "scripts": {
@@ -14,15 +14,8 @@
     "spec": "vitest run",
     "spec:coverage": "vitest run --coverage"
   },
-  "mikro-orm": {
-    "configPaths": [
-      "./src/mikro-orm.config.ts",
-      "./dist/mikro-orm.config.js"
-    ]
-  },
   "dependencies": {
     "@nuxt/eslint": "^1.9.0",
-    "@nuxt/test-utils": "^3.19.2",
     "@prisma/nuxt": "^0.3.0",
     "@tailwindcss/vite": "^4.1.12",
     "@vueuse/core": "^13.8.0",
@@ -42,10 +35,16 @@
     "vue-router": "^4.5.1"
   },
   "devDependencies": {
+    "@nuxt/test-utils": "^3.19.2",
+    "@vitejs/plugin-vue": "^5.1.4",
+    "@vue/test-utils": "^2.4.6",
+    "happy-dom": "^18.0.1",
     "nuxt-processor": "^0.0.3",
+    "playwright-core": "^1.55.0",
     "typescript": "^5.9.2",
     "vite-plugin-eslint2": "^5.0.4",
     "vite-tsconfig-paths": "^5.1.4",
+    "vitest": "^3.2.4",
     "vue-tsc": "^3.0.6"
   }
 }

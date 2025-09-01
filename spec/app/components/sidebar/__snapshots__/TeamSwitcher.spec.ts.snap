@@ -1,0 +1,40 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`components/navigation/sidebar/TeamSwitcher.vue > matches snapshot 1`] = `
+"<ul>
+  <li>
+    <div>
+      <div as-child=""><button size="lg" class="data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground">
+          <div class="flex aspect-square size-8 items-center justify-center rounded-lg bg-sidebar-primary text-sidebar-primary-foreground">
+            <!---->
+          </div>
+          <div class="grid flex-1 text-left text-sm leading-tight"><span class="truncate font-medium">Acme Inc</span><span class="truncate text-xs">Enterprise</span></div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide ml-auto lucide-chevrons-up-down-icon lucide-chevrons-up-down ml-auto">
+            <path d="m7 15 5 5 5-5"></path>
+            <path d="m7 9 5-5 5 5"></path>
+          </svg>
+        </button></div>
+      <div data-side="right" data-align="start" class="w-[--reka-dropdown-menu-trigger-width] min-w-56 rounded-lg" side-offset="4">
+        <div class="text-xs text-muted-foreground"> Teams </div>
+        <div class="dropdown-menu-item gap-2 p-2">
+          <div class="flex size-6 items-center justify-center rounded-sm border">
+            <!---->
+          </div> Acme Inc <kbd>⌘1</kbd>
+        </div>
+        <div class="dropdown-menu-item gap-2 p-2">
+          <div class="flex size-6 items-center justify-center rounded-sm border">
+            <!---->
+          </div> Acme Corp <kbd>⌘2</kbd>
+        </div>
+        <hr>
+        <div class="dropdown-menu-item gap-2 p-2">
+          <div class="flex size-6 items-center justify-center rounded-md border bg-transparent"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide size-4 lucide-plus-icon lucide-plus size-4">
+              <path d="M5 12h14"></path>
+              <path d="M12 5v14"></path>
+            </svg></div>
+          <div class="font-medium text-muted-foreground"> Add team </div>
+        </div>
+      </div>
+    </div>
+  </li>
+</ul>"
+`;

@@ -1,0 +1,15 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`components/navigation/header/AppHeader.vue > matches snapshot 1`] = `
+"<header class="flex h-16 shrink-0 items-center gap-2 transition-[width,height] ease-linear group-has-data-[collapsible=icon]/sidebar-wrapper:h-12">
+  <div class="flex items-center gap-2 px-4"><button class="sidebar-trigger -ml-1"></button>
+    <hr orientation="vertical" class="mr-2 data-[orientation=vertical]:h-4">
+    <nav class="breadcrumb">
+      <ul>
+        <li class="hidden md:block"><a href="#"> Building Your Application </a></li><span class="hidden md:block">|</span>
+        <li><span class="page">Data Fetching</span></li>
+      </ul>
+    </nav>
+  </div>
+</header>"
+`;
