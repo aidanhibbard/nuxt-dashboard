@@ -27,3 +27,5 @@ logs
 .eslintcache
 
 /generated/prisma
+
+dump.rdb
