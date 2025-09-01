@@ -1,0 +1,7 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`components/ui/LineChart.vue > matches snapshot 1`] = `
+"<div style="height: 300px;">
+  <div class="chart-line" data="[object Object]" options="[object Object]"></div>
+</div>"
+`;

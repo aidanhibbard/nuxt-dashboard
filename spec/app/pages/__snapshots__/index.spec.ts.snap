@@ -1,9 +1,140 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`pages/index.vue > matches snapshot 1`] = `
-"<div class="grid auto-rows-min gap-4 md:grid-cols-3">
-  <div class="bg-muted/50 aspect-video rounded-xl"></div>
-  <div class="bg-muted/50 aspect-video rounded-xl"></div>
-  <div class="bg-muted/50 aspect-video rounded-xl"></div>
+"<div class="space-y-6">
+  <!-- Header -->
+  <div class="flex items-center justify-between">
+    <div>
+      <h1 class="text-3xl font-bold tracking-tight"> Dashboard </h1>
+      <p class="text-muted-foreground"> Welcome back! Here's what's happening with your business today. </p>
+    </div>
+  </div><!-- Stats Cards -->
+  <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+    <div data-slot="card" class="bg-card text-card-foreground flex flex-col gap-6 rounded-xl border py-6 shadow-sm">
+      <div data-slot="card-header" class="@container/card-header auto-rows-min grid-rows-[auto_auto] gap-1.5 px-6 has-data-[slot=card-action]:grid-cols-[1fr_auto] [.border-b]:pb-6 flex flex-row items-center justify-between space-y-0 pb-2">
+        <h3 data-slot="card-title" class="text-sm font-medium"> Total Users </h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide h-4 w-4 text-muted-foreground lucide-users-icon lucide-users h-4 w-4 text-muted-foreground">
+          <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+          <path d="M16 3.128a4 4 0 0 1 0 7.744"></path>
+          <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+          <circle cx="9" cy="7" r="4"></circle>
+        </svg>
+      </div>
+      <div data-slot="card-content" class="px-6">
+        <div class="text-2xl font-bold">1,247</div>
+        <p class="text-xs text-muted-foreground"><span class="text-green-600 flex items-center"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide h-3 w-3 mr-1 lucide-arrow-up-right-icon lucide-arrow-up-right h-3 w-3 mr-1"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg> +12.5% </span> from last month </p>
+      </div>
+    </div>
+    <div data-slot="card" class="bg-card text-card-foreground flex flex-col gap-6 rounded-xl border py-6 shadow-sm">
+      <div data-slot="card-header" class="@container/card-header auto-rows-min grid-rows-[auto_auto] gap-1.5 px-6 has-data-[slot=card-action]:grid-cols-[1fr_auto] [.border-b]:pb-6 flex flex-row items-center justify-between space-y-0 pb-2">
+        <h3 data-slot="card-title" class="text-sm font-medium"> Active Users </h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide h-4 w-4 text-muted-foreground lucide-user-check-icon lucide-user-check h-4 w-4 text-muted-foreground">
+          <path d="m16 11 2 2 4-4"></path>
+          <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+          <circle cx="9" cy="7" r="4"></circle>
+        </svg>
+      </div>
+      <div data-slot="card-content" class="px-6">
+        <div class="text-2xl font-bold">892</div>
+        <p class="text-xs text-muted-foreground"><span class="text-green-600 flex items-center"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide h-3 w-3 mr-1 lucide-arrow-up-right-icon lucide-arrow-up-right h-3 w-3 mr-1"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg> +8.2% </span> from last week </p>
+      </div>
+    </div>
+    <div data-slot="card" class="bg-card text-card-foreground flex flex-col gap-6 rounded-xl border py-6 shadow-sm">
+      <div data-slot="card-header" class="@container/card-header auto-rows-min grid-rows-[auto_auto] gap-1.5 px-6 has-data-[slot=card-action]:grid-cols-[1fr_auto] [.border-b]:pb-6 flex flex-row items-center justify-between space-y-0 pb-2">
+        <h3 data-slot="card-title" class="text-sm font-medium"> Total Revenue </h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide h-4 w-4 text-muted-foreground lucide-dollar-sign-icon lucide-dollar-sign h-4 w-4 text-muted-foreground">
+          <line x1="12" x2="12" y1="2" y2="22"></line>
+          <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+        </svg>
+      </div>
+      <div data-slot="card-content" class="px-6">
+        <div class="text-2xl font-bold">$125,000</div>
+        <p class="text-xs text-muted-foreground"><span class="text-green-600 flex items-center"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide h-3 w-3 mr-1 lucide-arrow-up-right-icon lucide-arrow-up-right h-3 w-3 mr-1"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg> +12.5%</span> from last month </p>
+      </div>
+    </div>
+    <div data-slot="card" class="bg-card text-card-foreground flex flex-col gap-6 rounded-xl border py-6 shadow-sm">
+      <div data-slot="card-header" class="@container/card-header auto-rows-min grid-rows-[auto_auto] gap-1.5 px-6 has-data-[slot=card-action]:grid-cols-[1fr_auto] [.border-b]:pb-6 flex flex-row items-center justify-between space-y-0 pb-2">
+        <h3 data-slot="card-title" class="text-sm font-medium"> Conversion Rate </h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide h-4 w-4 text-muted-foreground lucide-trending-up-icon lucide-trending-up h-4 w-4 text-muted-foreground">
+          <path d="M16 7h6v6"></path>
+          <path d="m22 7-8.5 8.5-5-5L2 17"></path>
+        </svg>
+      </div>
+      <div data-slot="card-content" class="px-6">
+        <div class="text-2xl font-bold">3.2%</div>
+        <p class="text-xs text-muted-foreground"><span class="text-red-600 flex items-center"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide h-3 w-3 mr-1 lucide-arrow-down-right-icon lucide-arrow-down-right h-3 w-3 mr-1"><path d="m7 7 10 10"></path><path d="M17 7v10H7"></path></svg> -0.8% </span> from last month </p>
+      </div>
+    </div>
+  </div><!-- Charts and Recent Orders -->
+  <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-7">
+    <!-- User Growth Chart -->
+    <div data-slot="card" class="bg-card text-card-foreground flex flex-col gap-6 rounded-xl border py-6 shadow-sm col-span-4">
+      <div data-slot="card-header" class="@container/card-header grid auto-rows-min grid-rows-[auto_auto] items-start gap-1.5 px-6 has-data-[slot=card-action]:grid-cols-[1fr_auto] [.border-b]:pb-6">
+        <h3 data-slot="card-title" class="leading-none font-semibold">User Growth</h3>
+        <p data-slot="card-description" class="text-muted-foreground text-sm"> New user registrations over the last 6 months </p>
+      </div>
+      <div data-slot="card-content" class="px-6">
+        <div style="height: 320px;">
+          <div class="chart-line" data="[object Object]" options="[object Object]"></div>
+        </div>
+      </div>
+    </div><!-- Recent Orders -->
+    <div data-slot="card" class="bg-card text-card-foreground flex flex-col gap-6 rounded-xl border py-6 shadow-sm col-span-3">
+      <div data-slot="card-header" class="@container/card-header grid auto-rows-min grid-rows-[auto_auto] items-start gap-1.5 px-6 has-data-[slot=card-action]:grid-cols-[1fr_auto] [.border-b]:pb-6">
+        <h3 data-slot="card-title" class="leading-none font-semibold">Recent Orders</h3>
+        <p data-slot="card-description" class="text-muted-foreground text-sm"> Latest transactions </p>
+      </div>
+      <div data-slot="card-content" class="px-6">
+        <div class="space-y-4">
+          <div class="flex items-center justify-between border-b pb-3 last:border-b-0 last:pb-0">
+            <div>
+              <p class="text-sm font-medium">ORD-10021 — Acme Inc.</p>
+              <p class="text-xs text-muted-foreground">billing@acme.com</p>
+            </div>
+            <div class="text-right">
+              <p class="text-sm font-medium"> $1,299</p>
+              <p class="text-xs text-green-600">paid</p>
+            </div>
+          </div>
+          <div class="flex items-center justify-between border-b pb-3 last:border-b-0 last:pb-0">
+            <div>
+              <p class="text-sm font-medium">ORD-10020 — Jane Smith</p>
+              <p class="text-xs text-muted-foreground">jane.smith@example.com</p>
+            </div>
+            <div class="text-right">
+              <p class="text-sm font-medium"> $49.99</p>
+              <p class="text-xs text-yellow-600">pending</p>
+            </div>
+          </div>
+          <div class="flex items-center justify-between border-b pb-3 last:border-b-0 last:pb-0">
+            <div>
+              <p class="text-sm font-medium">ORD-10019 — Globex LLC</p>
+              <p class="text-xs text-muted-foreground">ap@globex.com</p>
+            </div>
+            <div class="text-right">
+              <p class="text-sm font-medium"> $349</p>
+              <p class="text-xs text-green-600">paid</p>
+            </div>
+          </div>
+          <div class="flex items-center justify-between border-b pb-3 last:border-b-0 last:pb-0">
+            <div>
+              <p class="text-sm font-medium">ORD-10018 — Bob Johnson</p>
+              <p class="text-xs text-muted-foreground">bob.johnson@example.com</p>
+            </div>
+            <div class="text-right">
+              <p class="text-sm font-medium"> $20.99</p>
+              <p class="text-xs text-red-600">failed</p>
+            </div>
+          </div>
+          <div class="flex items-center justify-between border-b pb-3 last:border-b-0 last:pb-0">
+            <div>
+              <p class="text-sm font-medium">ORD-10017 — Wayne Enterprises</p>
+              <p class="text-xs text-muted-foreground">finance@wayne.com</p>
+            </div>
+            <div class="text-right">
+              <p class="text-sm font-medium"> $780</p>
+              <p class="text-xs text-green-600">paid</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>"
 `;

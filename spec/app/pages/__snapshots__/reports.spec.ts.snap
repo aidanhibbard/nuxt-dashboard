@@ -1,0 +1,47 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`pages/reports.vue > matches snapshot 1`] = `
+"<div class="space-y-6">
+  <!-- Header -->
+  <div>
+    <h1 class="text-3xl font-bold tracking-tight"> Reports </h1>
+    <p class="text-muted-foreground"> Analytics overview for your selected date range </p>
+  </div><!-- Inline Date Range Inputs -->
+  <div class="flex flex-wrap items-center gap-3"><input data-slot="input" class="file:text-foreground placeholder:text-muted-foreground selection:bg-primary selection:text-primary-foreground dark:bg-input/30 border-input flex h-9 min-w-0 rounded-md border bg-transparent px-3 py-1 text-base shadow-xs transition-[color,box-shadow] outline-none file:inline-flex file:h-7 file:border-0 file:bg-transparent file:text-sm file:font-medium disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive w-40" type="date" value="2025-08-02"><input data-slot="input" class="file:text-foreground placeholder:text-muted-foreground selection:bg-primary selection:text-primary-foreground dark:bg-input/30 border-input flex h-9 min-w-0 rounded-md border bg-transparent px-3 py-1 text-base shadow-xs transition-[color,box-shadow] outline-none file:inline-flex file:h-7 file:border-0 file:bg-transparent file:text-sm file:font-medium disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive w-40" type="date" value="2025-09-01"></div><!-- Charts -->
+  <div class="grid gap-6 lg:grid-cols-2">
+    <div data-slot="card" class="bg-card text-card-foreground flex flex-col gap-6 rounded-xl border py-6 shadow-sm">
+      <div data-slot="card-header" class="@container/card-header grid auto-rows-min grid-rows-[auto_auto] items-start gap-1.5 px-6 has-data-[slot=card-action]:grid-cols-[1fr_auto] [.border-b]:pb-6">
+        <h3 data-slot="card-title" class="leading-none font-semibold">Users</h3>
+        <p data-slot="card-description" class="text-muted-foreground text-sm">Daily new users</p>
+      </div>
+      <div data-slot="card-content" class="px-6">
+        <div style="height: 280px;">
+          <div class="chart-line" data="[object Object]" options="[object Object]"></div>
+        </div>
+      </div>
+    </div>
+    <div data-slot="card" class="bg-card text-card-foreground flex flex-col gap-6 rounded-xl border py-6 shadow-sm">
+      <div data-slot="card-header" class="@container/card-header grid auto-rows-min grid-rows-[auto_auto] items-start gap-1.5 px-6 has-data-[slot=card-action]:grid-cols-[1fr_auto] [.border-b]:pb-6">
+        <h3 data-slot="card-title" class="leading-none font-semibold">Revenue</h3>
+        <p data-slot="card-description" class="text-muted-foreground text-sm">Daily revenue</p>
+      </div>
+      <div data-slot="card-content" class="px-6">
+        <div style="height: 280px;">
+          <div class="chart-line" data="[object Object]" options="[object Object]"></div>
+        </div>
+      </div>
+    </div>
+    <div data-slot="card" class="bg-card text-card-foreground flex flex-col gap-6 rounded-xl border py-6 shadow-sm lg:col-span-2">
+      <div data-slot="card-header" class="@container/card-header grid auto-rows-min grid-rows-[auto_auto] items-start gap-1.5 px-6 has-data-[slot=card-action]:grid-cols-[1fr_auto] [.border-b]:pb-6">
+        <h3 data-slot="card-title" class="leading-none font-semibold">Activity</h3>
+        <p data-slot="card-description" class="text-muted-foreground text-sm">Events over time</p>
+      </div>
+      <div data-slot="card-content" class="px-6">
+        <div style="height: 300px;">
+          <div class="chart-line" data="[object Object]" options="[object Object]"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>"
+`;

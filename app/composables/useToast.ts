@@ -7,8 +7,9 @@ export interface Toast {
   duration?: number
 }
 
+const toasts = ref<Toast[]>([])
+
 export const useToast = () => {
-  const toasts = ref<Toast[]>([])
 
   const addToast = (toast: Omit<Toast, 'id'>) => {
     const id = Date.now().toString()

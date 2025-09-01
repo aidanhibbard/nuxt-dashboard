@@ -1,0 +1,7 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`components/ui/ToastContainer.vue > matches snapshot 1`] = `
+"<div data-v-b0807160="" class="fixed top-4 right-4 z-50 space-y-2">
+  <transition-group-stub data-v-b0807160="" name="toast" tag="div" appear="false" persisted="false" css="true" class="space-y-2"></transition-group-stub>
+</div>"
+`;
